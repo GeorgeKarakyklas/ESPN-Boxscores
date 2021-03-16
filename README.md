@@ -55,8 +55,3 @@ Container will:
 - Listen to query with format of (`coin_name`) (coin's name has to be in the list of coingecko coins list )
     + Example ("bitcoin")
 - Respond with coin's usd price
-
-## TODO : 
-- Binance
-- Bitfinex
-- Bittrex
