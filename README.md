@@ -1,7 +1,13 @@
 # Docker Images
+<<<<<<< HEAD
 ## ESPN-BOXSCORES
 - Zap Oracle that uses ESPN's api to query for boxscore of a basketball match passed in query. It responds with format [awayTeam awayScore | homeScore homeTeam].
 - It implements `https://github.com/zapproject/zap-oracle-template` using a custom Responder.ts file.
+=======
+## Coingecko
+- Zap Oracle that use ESPN's api to query for boxscores of basketball game's passed in query, respond with format .
+- Implement Oracle from `https://github.com/zapproject/zap-oracle-template`  with custom Responder.ts
+>>>>>>> f11b4dfd681ff06cda4dde257ecb577fd6862c77
 ### Requirements: 
 - Have Mnemonic for wallet, with ETH to fullfill queries
 - Determine information about your ESPN-Boxscores Oracle, such as : 
@@ -55,4 +61,8 @@ Container will:
 - Push information such as description and and query list to ipfs which will be displayed on zap admin site
 - Listen to query with format of (`coin_name`) (coin's name has to be in the list of coingecko coins list )
     + Example ("bitcoin")
+<<<<<<< HEAD
 - Respond with coin's usd price -->
+=======
+- Respond with coin's usd price
+>>>>>>> f11b4dfd681ff06cda4dde257ecb577fd6862c77
