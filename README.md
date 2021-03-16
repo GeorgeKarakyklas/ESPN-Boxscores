@@ -1,10 +1,10 @@
 # Docker Images
-## Coingecko
-- Zap Oracle that use Coingecko's api to query for USD price of coin name passed in query, respond with format [`price`]
-- Implement Oracle from `https://github.com/zapproject/zap-oracle-template`  with custom Responder.ts
+## ESPN-BOXSCORES
+- Zap Oracle that uses ESPN's api to query for boxscore of a basketball match passed in query. It responds with format [awayTeam awayScore | homeScore homeTeam].
+- It implements `https://github.com/zapproject/zap-oracle-template` using a custom Responder.ts file.
 ### Requirements: 
 - Have Mnemonic for wallet, with ETH to fullfill queries
-- Determine information about your Coingecko Oracle, such as : 
+- Determine information about your ESPN-Boxscores Oracle, such as : 
     + Title
     + Public key
     + Endpoint's name
@@ -13,9 +13,10 @@
     + Query list for endpoint
     
 ### Build image locally
-- `cd Coingecko`
+- `cd ESPN-Boxscores`
 - `docker build . --no-cache -t zap-coingecko`
-### Optional to push image to dockerhub
+
+<!-- ### Optional to push image to dockerhub
 - `docker image push zap-coingecko`
 ### Run image
 - To run the container , create a local `Config.json` with following format and information about the Oracle (Mnemonic, publid key, title, Endpoint schema and curve for each...)
@@ -54,9 +55,4 @@ Container will:
 - Push information such as description and and query list to ipfs which will be displayed on zap admin site
 - Listen to query with format of (`coin_name`) (coin's name has to be in the list of coingecko coins list )
     + Example ("bitcoin")
-- Respond with coin's usd price
-
-## TODO : 
-- Binance
-- Bitfinex
-- Bittrex
+- Respond with coin's usd price -->

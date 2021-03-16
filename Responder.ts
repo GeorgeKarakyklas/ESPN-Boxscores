@@ -1,22 +1,44 @@
-//1. Import coingecko-api
-const CoinGecko = require('coingecko-api');
+import fetch from 'node-fetch';
 
-//2. Initiate the CoinGecko API Client
-const CoinGeckoClient = new CoinGecko();
+export class Boxscore {
+    homeTeam: string;
+    awayTeam: string;
+    homeScore: string;
+    awayScore: string;
 
-//3. Make calls
-var func = async () => {
-        let data = await CoinGeckoClient.ping();
-};
+    constructor(homeTeam: string, awayTeam: string, homeScore: string, awayScore: string) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        this.homeScore = homeScore;
+        this.awayScore = awayScore;
+    }
 
-export async function getResponse(coin: string, params?: string[] | []) {
-        try {
-                let data = await CoinGeckoClient.coins.fetchMarketChart(coin.toLowerCase());
-                const price = data.data.prices[data.data.prices.length - 1][1]
-                console.log("data for coin", price[1])
-                return [price]
-        } catch (e) {
-                return [0] //return 0 to indicate price info is not available
-        }
+    public formatBoxscore() {
+        return `${this.awayTeam} ${this.awayScore} | ${this.homeScore} ${this.homeTeam}`;
+    }
 }
 
+export const baseURLforRequests = 'http://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard/'
+
+export async function getScoreResponse(gameId: string) {
+        const request = baseURLforRequests.concat(gameId);
+        try {
+                let response = await fetch(request);
+                let data = await response.json();
+                let homeTeam = data.competitions[0].competitors[0].team.displayName;
+                let awayTeam = data.competitions[0].competitors[1].team.displayName;
+                let homeScore = data.competitions[0].competitors[0].score;
+                let awayScore = data.competitions[0].competitors[1].score;
+                if (data.competitions[0].status.type.name == "STATUS_FINAL") {
+                    let result = new Boxscore(homeTeam, awayTeam, homeScore, awayScore);
+                    console.log(result.formatBoxscore());
+                    return result.formatBoxscore();
+                } else {
+                    console.log("Game has not finished!");
+                    return [0];
+                }
+        } catch (e) {
+            console.log(Error);
+            return [0];
+        }
+}
