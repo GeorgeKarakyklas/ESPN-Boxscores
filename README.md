@@ -4,8 +4,8 @@
 - It responds with format ['awayTeam' 'awayScore' | 'homeScore' 'homeTeam'].
 - It implements `https://github.com/zapproject/zap-oracle-template` using a custom Responder.ts file.
 ### Requirements: 
-- Have Mnemonic for wallet, with ETH to fullfill queries
-- Determine information about your ESPN-Boxscores Oracle, such as : 
+- Have Mnemonic for wallet, with ETH to fullfill queries.
+- Determine information about your ESPN-Boxscores Oracle, such as... 
     + Title
     + Public key
     + Endpoint's name
@@ -30,6 +30,6 @@ Need to replace this with our Config.json file.
 Container will:  
 - Create Oralce and Endpoint if none exists in Zap Registry.
 - Push information such as description and and query list to ipfs which will be displayed on zap admin site.
-- Listen to query with format of ???
+- Listen to query with format of ???.
     + Example: ???
-- Respond with the final boxscore of a game
+- Respond with the final boxscore of a game.
