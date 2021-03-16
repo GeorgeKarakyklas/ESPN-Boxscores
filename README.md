@@ -1,6 +1,6 @@
 # Docker Images
 ## Coingecko
-- Zap Oracle that use Coingecko's api to query for USD price of coin name passed in query, respond with format [`price`]
+- Zap Oracle that use ESPN's api to query for boxscores of basketball game's passed in query, respond with format .
 - Implement Oracle from `https://github.com/zapproject/zap-oracle-template`  with custom Responder.ts
 ### Requirements: 
 - Have Mnemonic for wallet, with ETH to fullfill queries
