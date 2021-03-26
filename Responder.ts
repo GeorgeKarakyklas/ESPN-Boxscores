@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from 'node-fetch'
 
 export class Boxscore {
     homeTeam: string;
@@ -126,18 +126,18 @@ export async function getResponse(query: string, params?: string[]) {
 } 
 
 
-// //Examples
-// getResponse("Test 1")
-// getResponse("Test 2", ['jnba'])
-// getResponse("Test 3", ['wnba', '202011265'])
-// getResponse("Test 4", ['wnba', '20201326'])
-// getResponse("Test 5", ['wnba', '20201006'])
-// getResponse("Test 6", ['wnba', '20201026', "Las Vegas Aces", "Seattle Storm"])
-// getResponse("Test 7", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm"])
-// getResponse("Test 8", ["nba", "20210325", "Portland Trail Blazers", "Miami Heat"])
-// getResponse("Test 9", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "statistic"])
-// getResponse("Test 10", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "fieldGoalPct"])
-// getResponse("Test 11", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "assists leaders"])
-// getResponse("Test 12", ["mens-college-basketball", "20210312", "UConn Huskies", "Creighton Bluejays"])
-// getResponse("Test 13", ["nba", "20210316", "Minnesota Timberwolves", "Los Angeles Lakers"])
-// getResponse("Test 14", ["nba", "20210324", "Atlanta Hawks", "Sacramento Kings"])
+//Examples
+getResponse("Test 1")
+getResponse("Test 2", ['jnba'])
+getResponse("Test 3", ['wnba', '202011265'])
+getResponse("Test 4", ['wnba', '20201326'])
+getResponse("Test 5", ['wnba', '20201006'])
+getResponse("Test 6", ['wnba', '20201026', "Las Vegas Aces", "Seattle Storm"])
+getResponse("Test 7", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm"])
+getResponse("Test 8", ["nba", "20210325", "Portland Trail Blazers", "Miami Heat"])
+getResponse("Test 9", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "statistic"])
+getResponse("Test 10", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "fieldGoalPct"])
+getResponse("Test 11", ["wnba", "20201006", "Las Vegas Aces", "Seattle Storm", "assists leaders"])
+getResponse("Test 12", ["mens-college-basketball", "20210312", "UConn Huskies", "Creighton Bluejays"])
+getResponse("Test 13", ["nba", "20210316", "Minnesota Timberwolves", "Los Angeles Lakers"])
+getResponse("Test 14", ["nba", "20210324", "Atlanta Hawks", "Sacramento Kings"])
