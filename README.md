@@ -23,6 +23,6 @@ Container will:
     + League: `["nba", "wnba", "nba-g-league", "mens-college-basketball", "womens-college-basketball"]`
     + Date Format: `YYYYMMDD`
     + Team Names: Same as the full display name of every team on ESPN's site. (CASE SENSITIVE!)
--Valid inputs for optional arguements:
+- Valid inputs for optional arguements:
     + Valid Statistic: ```["rebounds", "avgRebounds", "assists", "fieldGoalsAttempted", "fieldGoaldsMade", "fieldGoalPct", "freeThrowPct", "freeThrowsAttempted", "freeThrowsMade", "threePointPct", "threePointFieldGoalsAttempted", "threePointFieldGoalsMade", "avgPoints", "avgAssists", "threePointFieldGoalPct", "points leaders",                "rebounds leaders", "assists leaders"]```
 - Responds with the final boxscore of a game or a comparison of the teams or team leaders within a specified stat category.
