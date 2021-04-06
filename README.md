@@ -1,5 +1,5 @@
 # Docker Images
-## ESPN-BOXSCORES
+## SCORACLE.BB
 - Zap Oracle that uses ESPN's api to query for the final boxscore of any basketball game passed in a query. 
 - It responds with format ['awayTeam' 'awayScore' | 'homeScore' 'homeTeam'].
 - It implements `https://github.com/zapproject/zap-oracle-template` using a custom Responder.ts file.
