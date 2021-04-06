@@ -17,6 +17,15 @@
 Container will:  
 - Create Oralce and Endpoint if none exists in Zap Registry.
 - Push information such as description and and query list to ipfs which will be displayed on zap admin site.
-- Listen to query with format: `["League", "Date(YYYYMMDD)", "Away Team", "Home Team", "Valid Statistic (Optional)"]`
+- Listen to query with format: `["League", "Date", "Away Team", "Home Team", "Valid Statistic (Optional)"]`
     + Example: `["mens-college-basketball", "20140407", "Kentucky Wildcats", "UConn Huskies"]`
+- Valid inputs for required arguements:
+    + League: `["nba", "wnba", "nba-g-league", "mens-college-basketball", "womens-college-basketball"]`
+    + Date Format: `YYYYMMDD`
+    + Team Names: Same as the full display name of every team on ESPN's site. (CASE SENSITIVE!)
+-Valid inputs for optional arguements:
+    + Valid Statistic: 
+    + ```
+    ["rebounds", "avgRebounds", "assists", "fieldGoalsAttempted", "fieldGoaldsMade", "fieldGoalPct", "freeThrowPct", "freeThrowsAttempted", "freeThrowsMade",           "threePointPct", "threePointFieldGoalsAttempted", "threePointFieldGoalsMade", "avgPoints", "avgAssists", "threePointFieldGoalPct", "points leaders",                 "rebounds leaders", "assists leaders"]
+    ```
 - Responds with the final boxscore of a game or a comparison of the teams or team leaders within a specified stat category.
