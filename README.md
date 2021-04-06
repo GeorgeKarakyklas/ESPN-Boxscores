@@ -5,27 +5,14 @@
 - It implements `https://github.com/zapproject/zap-oracle-template` using a custom Responder.ts file.
 ### Requirements: 
 - Have Mnemonic for wallet, with ETH to fullfill queries.
-- Determine information about your ESPN-Boxscores Oracle, such as... 
-    + Title
-    + Public key
-    + Endpoint's name
-    + Endpoint's curve
-    + Description for md
-    + Query list for endpoint
 ### Build image locally
-- `cd ESPN-Boxscores`
-- `docker build . --no-cache -t zap-espn-boxscores`
+- `cd SCORACLE.BB
+- `docker build . --no-cache -t zap-scoracle.bb
 ### Optional to push image to dockerhub
-- `docker image push zap-espn-boxscores`
+- `docker image push zap-scoracle.bb
 ### Run image
-- To run the container, create a local `Config.json` with the following format and information about the Oracle.
-```
-
-Need to replace this with our Config.json file.
-
-```
 - Mount the local config file to the container with following command: 
-    + `docker run --mount type=bind,source="$(pwd)"/path_to_local_file/Config.json,target=/zap/zap-oracle-template/Oracle/Config.json zap-espn-boxscores`
+    + `docker run --mount type=bind,source="$(pwd)"/path_to_local_file/Config.json,target=/zap/zap-oracle-template/Oracle/Config.json zap-scoracle.bb
 ### Result :
 Container will:  
 - Create Oralce and Endpoint if none exists in Zap Registry.
