@@ -1,31 +1,24 @@
 {
-    "title": "ESPN Boxscores Oracle",
+    "title": "UCONN SDP",
     "public_key": 100,
-    "NODE_URL": "ws://0.0.0.0:8545",
-    "mnemonic": "test test test test test test test test test test test junk",
+    "NODE_URL": "wss://kovan.infura.io/ws/v3/9016b08acb094880b40b2142923b8dc2",
+    "mnemonic": "zero blame claw convince horse million moral budget few lobster paper spare",
     "EndpointSchema": {
-        "name": "Basketball Score",
+        "name": "SCORACLE.BB",
         "curve": [
-            2,
             1,
-            2,
-            100000
+            5000,
+            10000
         ],
         "broker": "",
-        "md": "Generic basketball boxscore oracle",
+        "md": "Generic basketball oracle that can query boxscores and key statistiscs from a specific game in any of the American pro, semi-pro, and collegiate leagues. More details can be found on the project's Github repository.",
         "queryList": [
-		{
-                "query": "Basketball Final Boxscore",
-                "params": ["League", "Date(YYYYMMDD)", "Away Team", "Home Team"],
+            {
+                "query": "Basketball Final Boxscore or Final Statistic",
+                "params": ["League", "Date(YYYYMMDD)", "Away Team", "Home Team", "Valid Statistic (Optional)"],
                 "dynamic": false,
                 "responseType": "Array<string>"
-        	}
-		{
-                "query": "Basketball Final Team or Team Leader Statistics Comparison",
-                "params": ["League", "Date(YYYYMMDD)", "Away Team", "Home Team", "Stat Name"],
-                "dynamic": false,
-                "responseType": "Array<string>"
-            	}
+            }
         ]
     }
 }
