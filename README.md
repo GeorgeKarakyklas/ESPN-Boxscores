@@ -17,6 +17,6 @@
 Container will:  
 - Create Oralce and Endpoint if none exists in Zap Registry.
 - Push information such as description and and query list to ipfs which will be displayed on zap admin site.
-- Listen to query with format of `["League", "Date(YYYYMMDD)", "Away Team", "Home Team", "Valid Team or Team Leader Stitistic (Optional)"]`
+- Listen to query with format: `["League", "Date(YYYYMMDD)", "Away Team", "Home Team", "Valid Team or Team Leader Stitistic (Optional)"]`
     + Example: `["mens-college-basketball", "20140407", "Kentucky Wildcats", "UConn Huskies"]`
 - Responds with the final boxscore of a game or a comparison of the teams/team leaders within a specified stat category.
